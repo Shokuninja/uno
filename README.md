@@ -1,45 +1,38 @@
-MVP Classes include:
-1. Card Class
-2. Player Class
-3. Game Class
+# Uno Card Game
 
-GOING FORWARD:
+Welcome to the Uno Card Game! This Python program allows you to play the classic Uno card game against computer-controlled players. The game is implemented using classes for Game, Player, and Card.
 
-For now have deck be a list of cards in the game class .
+## Getting Started
 
-When we distribute the cards to the players,
-we're going to pop cards from the deck list and append them to the player hand .
+To start a game, simply run the provided Python script. You can personalize the game by specifying the number of players (between 2 and 4) when creating the `Game` object. Each player will be dealt a hand of cards to begin the game.
 
-Probably also need a Game attribute called pile (discard pile?) F
+```python
+# Example: Create a game with 3 players
+game = Game(num_players=3)
+```
 
-Need a new method maybe called "play" F
-While (self.game_over == False) loop over the players, play a card or draw a card F
+## Gameplay
 
-    Maybe:
-        Display opponents hand length F
-        Display what each opponent played F
+The game follows standard Uno rules. Players take turns playing cards that match the top card of the discard pile either by color or value. If a player cannot play a matching card, they must draw a card from the deck. Special cards such as "Skip," "Draw Two," and "Draw Four" introduce additional strategic elements.
 
-    Display user's hand F
-    Display last card played F
-    if player.name == Player 1, ask user to pick a card F
+### Player Input
 
-Maybe an attribute
+- During a human player's turn, they can choose to play a card by entering the index of the card in their hand or draw a card by entering "d" when prompted.
 
-WHAT'S LEFT:
+### Winning the Game
 
-    1. Impliment Turns .
-    2. We're basically there, let's head out, get some food and some sleep and resume tomorrow
+The game continues until one player has no cards left in their hand. The player with an empty hand is declared the winner, and the game concludes.
 
-    FRIDAY:
+## Card Deck
 
-     IV. The bots are playing multiple cards on their turn .
-        (We're not playing with stacks)
-      V. Some bots aren't playing anything, I guess they can't draw yet .
+The Uno deck consists of cards with different colors and values. Special cards include "Skip," "Draw Two," "Reverse," "Draw Four," and "Wild." The deck is initialized at the start of the game, and cards are drawn and played throughout.
 
-     VI. Game over when someone runs out of cards F
+## Playing Against Bots
 
-    VII. Special card funcitonality F
+If you don't have enough human players, the game includes computer-controlled players. They follow the same rules as human players and add a challenging aspect to the game.
 
-   VIII. Do something when someone has uno .
+## Author
 
-    IIX. Do something when someone runs out of cards
+This Uno Card Game was created by Shokuninja.
+
+Feel free to customize and enhance the game as you like! Have fun playing Uno!
